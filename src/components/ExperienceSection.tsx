@@ -63,7 +63,17 @@ const ExperienceSection = () => {
                 <div className="glass-card rounded-xl p-5 flex-1">
                   <h3 className="font-semibold text-foreground mt-1">{item.title}</h3>
                   <p className="text-sm text-primary/80 mb-2">{item.org}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-2">{item.description}</p>
+                  {item.link && (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-primary/80 transition-colors font-medium"
+                    >
+                      <ExternalLink size={13} /> View Credential
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}
