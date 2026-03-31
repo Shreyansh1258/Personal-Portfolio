@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, Lightbulb, Users } from "lucide-react";
+import profileImg from "@/assets/profile.jpg";
 
 const highlights = [
   {
@@ -33,12 +34,19 @@ const AboutSection = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
             Passionate about building great software
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-12">
-            I'm Shreyansh Pandey — a motivated and detail-oriented aspiring software engineer
-            from Uttar Pradesh, India. I'm passionate about frontend development and AI/ML,
-            and I love turning ideas into clean, functional applications. I'm actively seeking
-            opportunities where I can contribute, grow, and make a meaningful impact.
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+            <img
+              src={profileImg}
+              alt="Shreyansh Pandey"
+              className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-primary/20 shadow-lg shrink-0"
+            />
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              I'm Shreyansh Pandey — a motivated and detail-oriented aspiring software engineer
+              from Uttar Pradesh, India. I'm passionate about frontend development and AI/ML,
+              and I love turning ideas into clean, functional applications. I'm actively seeking
+              opportunities where I can contribute, grow, and make a meaningful impact.
+            </p>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
