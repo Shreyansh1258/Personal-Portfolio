@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, Lightbulb, Users } from "lucide-react";
+import profileImg from "@/assets/profile.jpg";
 
 const highlights = [
   {
