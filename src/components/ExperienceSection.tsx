@@ -6,21 +6,25 @@ const certifications = [
     title: "AI Fluency Framework & Foundations",
     org: "Anthropic",
     description: "Comprehensive understanding of AI fundamentals, prompt engineering, and responsible AI usage.",
+    link: "https://verify.skilljar.com/c/h7dsma937iu6",
   },
   {
     title: "Data Analysis with Python",
     org: "freeCodeCamp",
     description: "Proficiency in data manipulation, visualization, and analysis using Python libraries.",
+    link: "https://freecodecamp.org/certification/shreyansh1258/data-analysis-with-python-v7",
   },
   {
     title: "Responsive Web Design",
     org: "freeCodeCamp",
     description: "Modern responsive web design techniques using HTML and CSS.",
+    link: "https://freecodecamp.org/certification/shreyansh1258/responsive-web-design-v9",
   },
   {
     title: "India AI Impact Buildathon",
     org: "HCL GUVI",
     description: "Participated in a national-level AI buildathon focused on real-world impact solutions.",
+    link: "https://www.guvi.in/share-certificate/5Im0aH7gO17620B111",
   },
 ];
 
