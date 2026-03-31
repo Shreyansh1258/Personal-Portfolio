@@ -31,7 +31,6 @@ const ContactSection = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-10">
-          {/* Info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -44,22 +43,21 @@ const ContactSection = () => {
             </p>
 
             <div className="space-y-4">
-              <a href="mailto:your.email@example.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                <Mail size={18} /> your.email@example.com
+              <a href="mailto:pandey.shreyansh321@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                <Mail size={18} /> pandey.shreyansh321@gmail.com
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                <Linkedin size={18} /> linkedin.com/in/yourprofile
+              <a href="https://www.linkedin.com/in/shreyansh-pandey-1094b5244" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                <Linkedin size={18} /> linkedin.com/in/shreyansh-pandey
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                <Github size={18} /> github.com/yourusername
+              <a href="https://github.com/Shreyansh1258" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                <Github size={18} /> github.com/Shreyansh1258
               </a>
               <p className="flex items-center gap-3 text-muted-foreground">
-                <MapPin size={18} /> Your City, Country
+                <MapPin size={18} /> Uttar Pradesh, India
               </p>
             </div>
           </motion.div>
 
-          {/* Form */}
           <motion.form
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

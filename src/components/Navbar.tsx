@@ -31,7 +31,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#" className="font-display text-xl font-semibold text-foreground">
-          Portfolio<span className="text-primary">.</span>
+          Shreyansh<span className="text-primary">.</span>
         </a>
 
         {/* Desktop */}

@@ -34,9 +34,9 @@ const AboutSection = () => {
             Passionate about building great software
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-12">
-            I'm a motivated and detail-oriented developer with a passion for creating elegant,
-            user-centered applications. With a strong foundation in modern web technologies,
-            I bring ideas to life through clean code and thoughtful design. I'm actively seeking
+            I'm Shreyansh Pandey — a motivated and detail-oriented aspiring software engineer
+            from Uttar Pradesh, India. I'm passionate about frontend development and AI/ML,
+            and I love turning ideas into clean, functional applications. I'm actively seeking
             opportunities where I can contribute, grow, and make a meaningful impact.
           </p>
         </motion.div>

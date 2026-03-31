@@ -1,37 +1,14 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce application with cart management, payment integration, and an admin dashboard for product management.",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    impact: "Reduced checkout time by 40% through optimized UX flow.",
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "Task Management App",
-    description: "A collaborative task manager with real-time updates, drag-and-drop organization, and team workspaces.",
-    tech: ["TypeScript", "Next.js", "PostgreSQL", "WebSocket"],
-    impact: "Improved team productivity tracking by 60% in beta testing.",
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "AI Content Generator",
-    description: "An intelligent content creation tool that leverages OpenAI APIs to help marketers generate blog posts and social copy.",
-    tech: ["Python", "FastAPI", "React", "OpenAI"],
-    impact: "Generated 10,000+ content pieces in the first month of launch.",
-    github: "https://github.com",
-  },
-  {
-    title: "Portfolio Website",
-    description: "A modern, responsive portfolio built with React and Tailwind CSS featuring smooth animations and optimized performance.",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    impact: "Achieved 98+ Lighthouse performance score.",
-    github: "https://github.com",
-    live: "https://example.com",
+    title: "AI Resume Analyzer",
+    description: "Uses Python and AI/ML techniques to analyze resumes and provide feedback on skills, formatting, and keyword optimization.",
+    tech: ["Python", "pandas", "scikit-learn", "NLP"],
+    impact: "Improves resume quality; demonstrates AI/ML initiative.",
+    status: "In Progress",
+    github: undefined,
   },
 ];
 
@@ -62,9 +39,16 @@ const ProjectsSection = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="glass-card rounded-xl p-6 group hover:glow-border transition-all duration-300"
             >
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                {project.title}
-              </h3>
+              <div className="flex items-center gap-3 mb-3">
+                <h3 className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+                {project.status && (
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-primary/20 text-primary font-medium">
+                    {project.status}
+                  </span>
+                )}
+              </div>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                 {project.description}
               </p>
@@ -85,23 +69,18 @@ const ProjectsSection = () => {
               </p>
 
               <div className="flex gap-3">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Github size={15} /> Code
-                </a>
-                {project.live && (
+                {project.github && (
                   <a
-                    href={project.live}
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    <ExternalLink size={15} /> Live Demo
+                    <Github size={15} /> Code
                   </a>
+                )}
+                {!project.github && (
+                  <span className="text-xs text-muted-foreground italic">GitHub link coming soon</span>
                 )}
               </div>
             </motion.div>
