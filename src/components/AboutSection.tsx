@@ -1,0 +1,67 @@
+import { motion } from "framer-motion";
+import { Target, Lightbulb, Users } from "lucide-react";
+
+const highlights = [
+  {
+    icon: Target,
+    title: "Goal-Oriented",
+    description: "I focus on delivering measurable results and impactful solutions.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Continuous Learner",
+    description: "Always exploring new technologies and refining my craft.",
+  },
+  {
+    icon: Users,
+    title: "Team Player",
+    description: "I thrive in collaborative environments and value clear communication.",
+  },
+];
+
+const AboutSection = () => {
+  return (
+    <section id="about" className="section-padding">
+      <div className="container max-w-5xl">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">About Me</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
+            Passionate about building great software
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-12">
+            I'm a motivated and detail-oriented developer with a passion for creating elegant,
+            user-centered applications. With a strong foundation in modern web technologies,
+            I bring ideas to life through clean code and thoughtful design. I'm actively seeking
+            opportunities where I can contribute, grow, and make a meaningful impact.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {highlights.map((item, i) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.15 }}
+              className="glass-card rounded-xl p-6 hover:glow-border transition-shadow duration-300"
+            >
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <item.icon size={20} className="text-primary" />
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
