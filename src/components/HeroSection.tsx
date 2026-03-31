@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Briefcase, Mail } from "lucide-react";
+import { ArrowDown, Briefcase, Mail, Download } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
