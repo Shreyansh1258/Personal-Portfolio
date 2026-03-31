@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Briefcase, Mail } from "lucide-react";
+import { ArrowDown, Briefcase, Mail, Download } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -41,6 +41,14 @@ const HeroSection = () => {
             >
               <Mail size={18} />
               Contact Me
+            </a>
+            <a
+              href="/Shreyansh_Pandey_Resume.docx"
+              download
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-primary bg-primary/10 text-primary font-medium hover:bg-primary/20 transition-colors"
+            >
+              <Download size={18} />
+              Download Resume
             </a>
           </div>
         </motion.div>
