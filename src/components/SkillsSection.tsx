@@ -1,41 +1,34 @@
 import { motion } from "framer-motion";
-import { Code2, Wrench, MessageSquare } from "lucide-react";
+import { Code2, Wrench, Award } from "lucide-react";
 
 const skillCategories = [
   {
     icon: Code2,
-    title: "Technical Skills",
+    title: "Programming & Web",
     skills: [
-      { name: "JavaScript / TypeScript", level: 90 },
-      { name: "React & Next.js", level: 85 },
-      { name: "Node.js / Express", level: 80 },
+      { name: "C / C++", level: 80 },
       { name: "Python", level: 75 },
-      { name: "SQL & Databases", level: 78 },
-      { name: "HTML / CSS / Tailwind", level: 92 },
+      { name: "HTML", level: 90 },
+      { name: "CSS", level: 85 },
     ],
   },
   {
     icon: Wrench,
     title: "Tools & Technologies",
     skills: [
-      { name: "Git & GitHub", level: 88 },
-      { name: "Docker", level: 70 },
-      { name: "CI/CD Pipelines", level: 72 },
-      { name: "Figma", level: 65 },
-      { name: "AWS / Cloud Services", level: 68 },
-      { name: "REST & GraphQL APIs", level: 82 },
+      { name: "GitHub", level: 85 },
+      { name: "VS Code", level: 90 },
+      { name: "Basic AI/ML Tools", level: 65 },
     ],
   },
   {
-    icon: MessageSquare,
-    title: "Soft Skills",
-    skills: [
-      { name: "Problem Solving", level: 92 },
-      { name: "Communication", level: 88 },
-      { name: "Team Collaboration", level: 90 },
-      { name: "Time Management", level: 85 },
-      { name: "Adaptability", level: 90 },
-      { name: "Critical Thinking", level: 87 },
+    icon: Award,
+    title: "Certifications",
+    items: [
+      "AI Fluency Framework & Foundations – Anthropic",
+      "Data Analysis with Python – freeCodeCamp",
+      "Responsive Web Design – freeCodeCamp",
+      "India AI Impact Buildathon – HCL GUVI",
     ],
   },
 ];
@@ -91,11 +84,23 @@ const SkillsSection = () => {
                 </div>
                 <h3 className="font-semibold text-foreground">{cat.title}</h3>
               </div>
-              <div className="space-y-4">
-                {cat.skills.map((skill, si) => (
-                  <SkillBar key={skill.name} {...skill} delay={ci * 0.15 + si * 0.08} />
-                ))}
-              </div>
+
+              {"skills" in cat ? (
+                <div className="space-y-4">
+                  {cat.skills.map((skill, si) => (
+                    <SkillBar key={skill.name} {...skill} delay={ci * 0.15 + si * 0.08} />
+                  ))}
+                </div>
+              ) : (
+                <ul className="space-y-3">
+                  {cat.items!.map((item) => (
+                    <li key={item} className="text-sm text-muted-foreground flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✦</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </motion.div>
           ))}
         </div>

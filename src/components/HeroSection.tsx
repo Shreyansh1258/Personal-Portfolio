@@ -21,10 +21,10 @@ const HeroSection = () => {
             Welcome to my portfolio
           </p>
           <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Hi, I'm <span className="text-gradient">Your Name</span>
+            Hi, I'm <span className="text-gradient">Shreyansh Pandey</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed mb-10">
-            Aspiring Software Developer | Building impactful solutions with clean code and thoughtful design.
+            Aspiring Software Engineer | Frontend Developer | AI/ML Enthusiast
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
