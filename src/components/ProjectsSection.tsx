@@ -4,11 +4,12 @@ import { Github } from "lucide-react";
 const projects = [
   {
     title: "AI Resume Analyzer",
-    description: "Uses Python and AI/ML techniques to analyze resumes and provide feedback on skills, formatting, and keyword optimization.",
+    description: "An AI-powered web app that analyzes resumes and provides smart feedback on skills, formatting, and keyword optimization.",
     tech: ["Python", "pandas", "scikit-learn", "NLP"],
-    impact: "Improves resume quality; demonstrates AI/ML initiative.",
-    status: "In Progress",
-    github: undefined,
+    impact: "Helps users improve resume quality with actionable insights.",
+    status: "Live",
+    github: "https://github.com/Shreyansh1258/Resume-Analyzer",
+    demo: "https://resume-analyzer-2-02o8.onrender.com/",
   },
 ];
 
