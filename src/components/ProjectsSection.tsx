@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
     title: "AI Resume Analyzer",
-    description: "An AI-powered web app that analyzes resumes and provides smart feedback on skills, formatting, and keyword optimization.",
+    description:
+      "An AI-powered web app that analyzes resumes and provides smart feedback on skills, formatting, and keyword optimization.",
     tech: ["Python", "pandas", "scikit-learn", "NLP"],
     impact: "Helps users improve resume quality with actionable insights.",
     status: "Live",
@@ -24,7 +25,9 @@ const ProjectsSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">Projects</p>
+          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
+            Projects
+          </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold">
             Featured work
           </h2>
@@ -44,12 +47,14 @@ const ProjectsSection = () => {
                 <h3 className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
+
                 {project.status && (
                   <span className="text-xs px-2 py-0.5 rounded-full bg-primary/20 text-primary font-medium">
                     {project.status}
                   </span>
                 )}
               </div>
+
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                 {project.description}
               </p>
@@ -69,7 +74,8 @@ const ProjectsSection = () => {
                 ↗ {project.impact}
               </p>
 
-              <div className="flex gap-3">
+              {/* LINKS SECTION FIXED */}
+              <div className="flex gap-4">
                 {project.github && (
                   <a
                     href={project.github}
@@ -80,8 +86,16 @@ const ProjectsSection = () => {
                     <Github size={15} /> Code
                   </a>
                 )}
-                {!project.github && (
-                  <span className="text-xs text-muted-foreground italic">GitHub link coming soon</span>
+
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 transition-colors font-medium"
+                  >
+                    <ExternalLink size={15} /> Live Demo
+                  </a>
                 )}
               </div>
             </motion.div>
