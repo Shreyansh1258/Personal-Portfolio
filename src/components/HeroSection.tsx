@@ -43,7 +43,7 @@ const HeroSection = () => {
               Contact Me
             </a>
             <a
-              href="/Shreyansh_Pandey_Resume.docx"
+              href="/Shreyansh_Pandey_Resume.pdf"
               download
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-primary bg-primary/10 text-primary font-medium hover:bg-primary/20 transition-colors"
             >
